@@ -10,7 +10,7 @@ int main(){
     char type;
     cout<<"Input type: A, B or C\n"; cin >> type;    
     cout<<"Input x\n"; cin >> x;
-/*
+
 
 //повна команда розгалудження 
     if (type == 'A'){
@@ -29,7 +29,7 @@ int main(){
         cout<<"Incorect input\n";
         return 1;
     }
-*/
+/*
 //коротка команда розгалудження 
     if (type == 'A'){
         y = 12.4*sin(abs(x/2.1))-8.3*cos(1.2*x);
@@ -46,7 +46,7 @@ int main(){
         res = 100*abs(y+135);
         tax = 0.2;
     }
-
+*/
     taxAmount = res * tax;
     amountPay = res - taxAmount;
     cout << "Нарахована сума: " << y << '\n';

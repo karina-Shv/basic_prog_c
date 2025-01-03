@@ -8,7 +8,7 @@ int main(){
     int rooms;
     int residents;
     
-    cout<<"Input flat number\n"; cin >> flat; 
+    cout<<"Input flat number 1-5\n"; cin >> flat; 
 
     switch (flat){
         case 1:{
