@@ -1,21 +1,42 @@
 #include <iostream>
-#include <stdio.h>
-#include <windows.h>
 #include <math.h>
 
-using namespace std;
-
-double num_Amstr (int n){
-    
-    return 0;
+int countDigits(int num) {
+    int count = 0;
+    while (num != 0) {
+        num /= 10;
+        count++;
+    }
+    return count;
 }
 
+bool isArmstrong(int num) {
+    int original = num;
+    int n = countDigits(num);
+    int sum = 0;
 
-int main (){
-    
+    while (num != 0) {
+        int digit = num % 10;
+        sum += std::pow(digit, n);
+        num /= 10;
+    }
 
-    cout << "Точне значення y: " << '\n';
-    cout << "Похибка: " << '\n';
+    return sum == original;
+}
+
+void findArmstrongNumbers(int *start, int *end) {
+    for (int i = *start; i <= *end; ++i) {
+        if (isArmstrong(i)) {
+            std::cout << i << " ";
+        }
+    }
+}
+
+int main() {
+    int start = 10, end = 9999;
+
+    std::cout << "Числа Армстронга в діапазоні від " << start << " до " << end << ":\n";
+    findArmstrongNumbers(&start, &end);
 
     return 0;
 }
