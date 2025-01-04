@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 
+using namespace std;
+
 int countDigits(int num) {
     int count = 0;
     while (num != 0) {
@@ -17,7 +19,7 @@ bool isArmstrong(int num) {
 
     while (num != 0) {
         int digit = num % 10;
-        sum += std::pow(digit, n);
+        sum += pow(digit, n);
         num /= 10;
     }
 
@@ -27,7 +29,7 @@ bool isArmstrong(int num) {
 void findArmstrongNumbers(int *start, int *end) {
     for (int i = *start; i <= *end; ++i) {
         if (isArmstrong(i)) {
-            std::cout << i << " ";
+            cout << i << " ";
         }
     }
 }
@@ -35,7 +37,7 @@ void findArmstrongNumbers(int *start, int *end) {
 int main() {
     int start = 10, end = 9999;
 
-    std::cout << "Числа Армстронга в діапазоні від " << start << " до " << end << ":\n";
+    cout << "Числа Армстронга в діапазоні від " << start << " до " << end << ":\n";
     findArmstrongNumbers(&start, &end);
 
     return 0;
